@@ -11,8 +11,7 @@ int main(int argc, char* argv[])
 	uint32_t sum = 0x00;
 	for(int i = 1; i < argc; i++)
 	{
-		char* str = argv[i];
-		uint32_t input_num = file_handler(str);
+		uint32_t input_num = file_handler(argv[i]);
 		uint32_t ordered_num = byte_order(input_num);
 		printf("%d(0x%08x) ", ordered_num, ordered_num);
 		if(i - 1 != argc - 2)
